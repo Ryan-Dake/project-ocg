@@ -7,12 +7,14 @@ public class Game {
     private Player player;
     private List<Scenario> scenarios;
     private Deck deck;
+    private Hand hand;
 
-    public Game(int seed, Player player, List<Scenario> scenarios, Deck deck) {
+    public Game(int seed, Player player, List<Scenario> scenarios, Deck deck, Hand hand) {
         this.seed = seed;
         this.player = player;
         this.scenarios = scenarios;
         this.deck = deck;
+        this.hand = hand;
     }
 
     public int getSeed() {
@@ -25,6 +27,14 @@ public class Game {
 
     public List<Scenario> getScenarios() {
         return scenarios;
+    }
+
+    public Deck getDeck() {
+        return deck;
+    }
+
+    public Hand getHand() {
+        return hand;
     }
 
     public void setSeed(int seed) {
@@ -43,7 +53,7 @@ public class Game {
         this.deck = deck;
     }
 
-    public Deck getDeck() {
-        return deck;
+    public void setHand(Hand hand) {
+        this.hand = hand;
     }
 }
